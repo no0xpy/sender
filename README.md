@@ -18,7 +18,7 @@
 ---
 
 ## 📦 Installation
-
+https://github.com/no0xpy/sender/releases
 
 ---
 
