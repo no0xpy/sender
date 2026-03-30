@@ -13,9 +13,7 @@
 - 🌑 **Dark mode** interface powered by CustomTkinter
 - 📥 **GET requests** — send a request to any URL and view the raw response body
 - 🗑️ **DELETE requests** — send a DELETE request and inspect the status code + response
-- 🔒 **Error handling** — network errors are caught and displayed gracefully
 - 🔗 **Auto URL fix** — automatically prepends `https://` if missing
-- ⏱️ **10s timeout** — prevents the UI from freezing on unresponsive servers
 
 ---
 
