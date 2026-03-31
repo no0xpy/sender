@@ -1,23 +1,21 @@
 import customtkinter as Ctk
 import requests
-import sys
-import subprocess
 import json as jsonlib
+import time
 
 Ctk.set_appearance_mode('dark')
-
+def clear_frame(frame):
+    for widget in frame.winfo_children():
+        widget.destroy()
 def home():
     homee.pack_forget()
     gett.pack_forget()
     dell.pack_forget()
     postjson.pack_forget()
     homee.pack()
-def rel():
-    subprocess.Popen([sys.executable, __file__])
-    w.destroy()
-    sys.exit()
 
 def get():
+    clear_frame(gett)
     homee.pack_forget()
     gett.pack_forget()
     dell.pack_forget()
@@ -30,7 +28,7 @@ def get():
     target.pack()
     btn = Ctk.CTkButton(gett, text="Send", text_color="white", command=sendget)
     btn.pack(pady=10)
-    backtohome = Ctk.CTkButton(gett, text="Back to home", text_color="white", command=rel)
+    backtohome = Ctk.CTkButton(gett, text="Back to home", text_color="white", command=home)
     backtohome.pack(pady=10)
 def sendget():
     url = target.get()
@@ -44,6 +42,7 @@ def sendget():
 
 
 def delete():
+    clear_frame(dell)
     homee.pack_forget()
     gett.pack_forget()
     dell.pack_forget()
@@ -56,7 +55,7 @@ def delete():
     target.pack()
     btn = Ctk.CTkButton(dell, text="Send", text_color="white", command=senddelete)
     btn.pack(pady=10)
-    backtohome = Ctk.CTkButton(dell, text="Back to home", text_color="white", command=rel)
+    backtohome = Ctk.CTkButton(dell, text="Back to home", text_color="white", command=home)
     backtohome.pack(pady=10)
 
 def senddelete():
@@ -70,6 +69,7 @@ def senddelete():
     txt.pack()
 
 def post():
+    clear_frame(postjson)
     homee.pack_forget()
     gett.pack_forget()
     dell.pack_forget()
@@ -87,7 +87,7 @@ def post():
     json_entry.pack()
     btn = Ctk.CTkButton(postjson, text="Send", text_color="white", command=sendjson)
     btn.pack(pady=10)
-    backtohome = Ctk.CTkButton(postjson, text="Back to home", text_color="white", command=rel)
+    backtohome = Ctk.CTkButton(postjson, text="Back to home", text_color="white", command=home)
     backtohome.pack(pady=10)
     global errorlabel
     errorlabel = Ctk.CTkLabel(postjson, text_color="red", text="")
@@ -115,6 +115,7 @@ def sendjson():
     e =  "JSON entry error"
     errorlabel.configure(text=e)
     errorlabel.pack()
+    errorlabel.after(2000, lambda: errorlabel.configure(text=""))
     
 w = Ctk.CTk()
 w.geometry("1000x1000")
