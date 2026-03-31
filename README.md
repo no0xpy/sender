@@ -3,7 +3,7 @@
 ![Python](https://img.shields.io/badge/Python-3%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![CustomTkinter](https://img.shields.io/badge/CustomTkinter-1f6aa5?style=for-the-badge&logo=python&logoColor=white)
 ![Requests](https://img.shields.io/badge/Requests-HTTP-brightgreen?style=for-the-badge&logo=python&logoColor=white)
-![Open Source Initiative Badge](https://img.shields.io/badge/Open%20Source%20Initiative-3DA639?logo=opensourceinitiative&logoColor=fff&style=flat)
+[![forthebadge](/badges/open-source.svg)](https://forthebadge.com)
 > A lightweight desktop HTTP client built with Python and CustomTkinter, supporting GET and DELETE requests with a clean dark-mode UI.
 
 ---
