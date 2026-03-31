@@ -12,7 +12,7 @@
 - 🌑 **Dark mode** interface powered by CustomTkinter
 - 📥 **GET requests** — send a request to any URL and view the raw response body
 - 🗑️ **DELETE requests** — send a DELETE request and inspect the status code + response
-- 🔗 **Auto URL fix** — automatically prepends `https://` if missing
+- 🗃️ **Open Source / Free** — the source code of the project is on our GitHub in the "src" folder
 
 ---
 
